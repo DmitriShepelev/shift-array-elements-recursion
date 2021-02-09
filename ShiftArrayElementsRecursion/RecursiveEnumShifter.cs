@@ -9,12 +9,17 @@ namespace ShiftArrayElements
         /// </summary>
         /// <param name="source">A source array.</param>
         /// <param name="directions">An array with directions.</param>
-        /// <returns>An array with shifted elements.</returns>\
+        /// <returns>An array with shifted elements.</returns>
         /// <exception cref="ArgumentNullException">source array is null.</exception>
         /// <exception cref="ArgumentNullException">directions array is null.</exception>
         /// <exception cref="InvalidOperationException">direction array contains an element that is not <see cref="Direction.Left"/> or <see cref="Direction.Right"/>.</exception>
         public static int[] Shift(int[] source, Direction[] directions)
         {
+            if (source is null)
+            {
+                throw new ArgumentNullException(nameof(source));
+            }
+
             // TODO #1. Implement the method using recursive local functions and Array.Copy method.
             throw new NotImplementedException();
         }

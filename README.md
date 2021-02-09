@@ -82,7 +82,7 @@ The "source" array contains three elements [1, 2, 3]. The "directions" array has
 
 Implement the "Shift" method in the [RecursiveShifter.cs](ShiftArrayElementsRecursion/RecursiveShifter.cs) file using recursive local functions and array indices only.
 
-The method has two arguments. The "source" arguments has the array of integers to shift and return. _Do not create a new array_. The "iterations" argument has the array of integers. Each value in the "iterations" array is a shift instruction that tells the number of shift iterations. The odd elements tells the number of left shift iterations. The even elements tells the number of right shift iterations. The first and the last elements in the "source" array should be wrapped to the other side of the array.
+The method has two arguments. The "source" arguments has the array of integers to shift and return. _Do not create a new array_. The "iterations" argument has the array of integers. Each value in the "iterations" array is a shift instruction that tells the number of shift iterations. The odd elements (an element with odd index) tells the number of right shift iterations. The even elements (an element with even index or zero index) tells the number of left shift iterations. The first and the last elements in the "source" array should be wrapped to the other side of the array.
 
 See examples for more details regarding the shift algorithm.
 
