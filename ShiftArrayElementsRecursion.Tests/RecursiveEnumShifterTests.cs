@@ -81,7 +81,7 @@ namespace ShiftArrayElements.Tests
         [TestCase(new[] { 1, 2, 3, 4, 5 }, new[] { Direction.Right, Direction.Right, Direction.Right, Direction.Right, Direction.Right }, ExpectedResult = new[] { 1, 2, 3, 4, 5 })]
         [TestCase(new[] { 1, 2, 3, 4, 5 }, new[] { Direction.Left, Direction.Left, Direction.Left, Direction.Left, Direction.Left }, ExpectedResult = new[] { 1, 2, 3, 4, 5 })]
         [TestCase(new[] { 1, 2, 3, 4, 5 }, new[] { Direction.Right, Direction.Right, Direction.Right, Direction.Right, Direction.Right }, ExpectedResult = new[] { 1, 2, 3, 4, 5 })]
-        public int[] Shift(int[] source, Direction[] directions)
+        public int[] Shift_SourceAndIterationsAreNotNull_ReturnsArrayWithShiftedElements(int[] source, Direction[] directions)
         {
             return RecursiveEnumShifter.Shift(source, directions);
         }
