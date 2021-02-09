@@ -89,7 +89,7 @@ See examples for more details regarding the shift algorithm.
 
 #### Example #4.
 
-The "source" array contains three elements [1, 2, 3]. The "iterations" array has only one element [1], that means there will be only one left shift iteration ("1" is an odd element).
+The "source" array contains three elements [1, 2, 3]. The "iterations" array has only one element [1], that means there will be only one left shift iteration ("1" is an zero index element).
 
 | Array Index                     | 0 | 1 | 2 |
 |---------------------------------|---|---|---|
@@ -100,7 +100,7 @@ The "source" array contains three elements [1, 2, 3]. The "iterations" array has
 
 #### Example #5.
 
-The "source" array contains three elements [1, 2, 3]. The "iterations" array has two elements [0, 1], that means there will be only one right shift iteration ("1" is an even element).
+The "source" array contains three elements [1, 2, 3]. The "iterations" array has two elements [0, 1], that means there will be only one right shift iteration ("1" is an odd element).
 
 | Array Index                     | 0 | 1 | 2 |
 |---------------------------------|---|---|---|
