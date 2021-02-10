@@ -31,7 +31,7 @@ if (currentDirection == Direction.Left)
 }
 else if (currentDirection == Direction.Right)
 {
-    // TODO: Handle "right" shift.
+    // TODO: Handle "right" shift.  
 }
 else
 {
