@@ -20,8 +20,43 @@ namespace ShiftArrayElements
                 throw new ArgumentNullException(nameof(source));
             }
 
-            // TODO #1. Implement the method using recursive local functions and Array.Copy method.
-            throw new NotImplementedException();
+            if (directions is null)
+            {
+                throw new ArgumentNullException(nameof(directions));
+            }
+
+            if (directions.Length == 0)
+            {
+                return source;
+            }
+
+            if (directions[0] == Direction.Left)
+            {
+                LeftShift(source, source[1..], source[0]);
+            }
+            else if (directions[0] == Direction.Right)
+            {
+                RightShift(source, source[..^1], source[^1]);
+            }
+            else
+            {
+                throw new InvalidOperationException($"Incorrect {directions[0]} enum value.");
+            }
+
+            return Shift(source, directions[1..]);
+
+            // #1. Implement the method using recursive local functions and Array.Copy method.
+            void LeftShift(int[] destination, int[] shiftRange, int firstElement)
+            {
+                destination[^1] = firstElement;
+                Array.Copy(shiftRange, destination, destination.Length - 1);
+            }
+
+            void RightShift(int[] destination, int[] shiftRange, int lastElement)
+            {
+                destination[0] = lastElement;
+                Array.Copy(shiftRange, 0, destination, 1, destination.Length - 1);
+            }
         }
     }
 }
